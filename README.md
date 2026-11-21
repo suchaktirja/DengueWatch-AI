@@ -67,9 +67,13 @@ The platform aims to support early awareness, data-driven decision-making, and m
 ## 4. Installation & Setup Instructions
 
 ### Prerequisites
-- [Add required software and dependencies]
-- [Add required versions]
-
+Make sure the following software and tools are installed:
+- Node.js: Latest LTS version
+- npm: Included with Node.js
+- Visual Studio Code: For development
+- Live Server Extension: For running the frontend locally
+- Git: For repository management
+- 
 ### Clone the Repository
 
 ```bash
@@ -80,32 +84,30 @@ cd DengueWatch-AI
 ### Install Dependencies
 
 ```bash
-[Add installation command]
+npm install
 ```
 
 ### Environment Variables
 
-Create a `.env` file in the appropriate directory and configure the required environment variables.
-
 ```env
-[Add environment variables here]
+PORT=5000
+SUPABASE_URL=your_supabase_project_url
+SUPABASE_ANON_KEY=your_supabase_anon_key
 ```
-
-**Note:** Never commit your actual `.env` file or expose secret keys in the public repository. Use `.env.example` to provide the required variable names.
 
 ### Run the Project
 
 ```bash
-[Add backend/frontend run commands]
+npm start
 ```
 
 ### Local Access
 
 ```text
-[Add local development URL]
-```
+Frontend: http://127.0.0.1:5500
 
----
+Backend API: http://localhost:5000
+```
 
 ## 5. AI Tools & External APIs Disclosure
 
