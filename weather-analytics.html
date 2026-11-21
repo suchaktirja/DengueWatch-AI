@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Weather Analytics — DengueWatch AI</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+    <div class="app-shell">
+        <aside class="sidebar"><a class="brand" href="index.html"><span
+                    class="brand-mark">✚</span><span>DengueWatch<small>AI SURVEILLANCE</small></span></a>
+            <div class="nav-label">WORKSPACE</div>
+            <nav><a class="nav-link" href="index.html">▦ <span>Overview</span></a><a class="nav-link"
+                    href="risk-prediction.html">⌁ <span>Risk Prediction</span></a><a class="nav-link active"
+                    href="weather-analytics.html">☁ <span>Weather Analytics</span></a><a class="nav-link"
+                    href="dengue-history.html">▤ <span>Dengue History</span></a><a class="nav-link"
+                    href="ward-comparison.html">▥ <span>Ward Comparison</span></a></nav>
+            <div class="sidebar-bottom"><a class="nav-link" href="help.html">ⓘ <span>Help & documentation</span></a>
+                <div class="team-card"><b>Public health team</b><small>Surveillance workspace</small>
+                    <p>5 cities · 60 wards monitored weekly</p>
+                </div>
+            </div>
+        </aside>
+        <main class="main">
+            <header class="topbar"><a class="crumb" href="index.html">Surveillance <span>/</span> <b>Weather
+                        Analytics</b></a>
+                <div class="top-actions"><span class="model-pill">● Weekly signals</span></div>
+            </header>
+            <div class="content">
+                <div class="page-heading">
+                    <div>
+                        <div class="eyebrow">ENVIRONMENTAL SIGNALS</div>
+                        <h1>Weather analytics</h1>
+                        <p>Explore weather patterns and multi-week rainfall signals.</p>
+                    </div>
+                    <div class="filters"><label>City<select id="citySelect">
+                                <option>Dhaka North</option>
+                                <option>Dhaka South</option>
+                                <option>Chattogram</option>
+                                <option>Gazipur</option>
+                                <option>Narayanganj</option>
+                            </select></label><label>Ward<select id="wardSelect">
+                                <option>Ward 17</option>
+                                <option>Ward 05</option>
+                                <option>Ward 12</option>
+                                <option>Ward 08</option>
+                                <option>Ward 04</option>
+                            </select></label></div>
+                </div>
+                <section class="stats-grid three">
+                    <article class="stat-card">
+                        <div class="stat-top">Weekly rainfall <span class="stat-icon mint">☂</span></div>
+                        <div class="stat-value">186 <small>mm</small></div>
+                        <div class="stat-foot"><span class="up">↑ 24% vs previous week</span></div>
+                    </article>
+                    <article class="stat-card">
+                        <div class="stat-top">Average temperature <span class="stat-icon amber">☼</span></div>
+                        <div class="stat-value">30.8<small>°C</small></div>
+                        <div class="stat-foot">Weekly average</div>
+                    </article>
+                    <article class="stat-card">
+                        <div class="stat-top">Relative humidity <span class="stat-icon mint">◌</span></div>
+                        <div class="stat-value">84<small>%</small></div>
+                        <div class="stat-foot">Weekly average</div>
+                    </article>
+                </section>
+                <section class="card">
+                    <div class="card-head">
+                        <div>
+                            <h3>Weekly rainfall</h3>
+                            <p>Last 8 weeks · millimetres</p>
+                        </div><span class="week-tag">W24–W31 · 2025</span>
+                    </div><canvas id="rainChart" height="110"></canvas>
+                </section>
+                <section class="section-grid">
+                    <article class="card">
+                        <div class="card-head">
+                            <div>
+                                <h3>Temperature trend</h3>
+                                <p>Weekly average · °C</p>
+                            </div>
+                        </div><canvas id="tempChart" height="150"></canvas>
+                    </article>
+                    <article class="card">
+                        <div class="card-head">
+                            <div>
+                                <h3>Humidity trend</h3>
+                                <p>Weekly average · %</p>
+                            </div>
+                        </div><canvas id="humidityChart" height="150"></canvas>
+                    </article>
+                </section>
+                <section class="card">
+                    <div class="card-head">
+                        <div>
+                            <h3>Rainfall lag impact</h3>
+                            <p>Illustrative association with dengue cases</p>
+                        </div>
+                    </div>
+                    <div class="lag-list">
+                        <div><span>1 week</span>
+                            <div class="lagbar"><i style="width:42%"></i></div><b>0.42</b>
+                        </div>
+                        <div><span>2 weeks</span>
+                            <div class="lagbar"><i style="width:61%"></i></div><b>0.61</b>
+                        </div>
+                        <div class="lag-list-best"><span>3 weeks</span>
+                            <div class="lagbar"><i style="width:86%"></i></div><b>0.86</b>
+                        </div>
+                        <div><span>4 weeks</span>
+                            <div class="lagbar"><i style="width:73%"></i></div><b>0.73</b>
+                        </div>
+                    </div>
+                    <div class="chart-caption">Strongest signal at 3 weeks in the illustrative example.</div>
+                </section>
+                <footer>Historical coverage 2016–2025 / 5 cities / 60 wards <span>Illustrative data · Not a clinical
+                        diagnosis</span></footer>
+            </div>
+        </main>
+    </div>
+    <div class="toast" id="toast"></div>
+    <script src="js/app.js"></script>
+</body>
+
+</html>
