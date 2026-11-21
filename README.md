@@ -120,8 +120,8 @@ The following AI tools were used during the development process:
 | Google Antigravity | AI-assisted development, code generation, debugging, and project workflow support. |
 
 ### External APIs
-- [Add API name and its purpose]
-- [Add API name and its purpose]
+- Supabase API – Used to store, retrieve, and manage ward information, dengue case records, weather observations, risk predictions, and alerts.
+- Python FastAPI Prediction Service – Used to connect the trained Random Forest ML models and generate dengue risk predictions for 2, 3, and 4 weeks ahead.
 
 ### AI Model / Endpoint
 - Model Name: Random Forest Regressor (Scikit-learn)
