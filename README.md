@@ -141,10 +141,10 @@ The following AI tools were used during the development process:
 ## 6. Dataset & Data Sources
 
 ### Dataset
-- Dataset Name: [Add Dataset Name]
-- Data Format: [Add Format]
-- Source: [Add Dataset Source]
-- Description: [Add Dataset Description]
+- Dataset Name: DengueWatch AI – Hackathon Preliminary Dengue Dataset
+- Data Format: Excel(.xlsx) and Processed CSV(.csv)
+- Source: Hackathon preliminary dataset(hackathon_preli_dataset.xlsx). The original upstream data publisher is not specified.
+- Description: The dataset contains 31,320 weekly records covering 60 wards across 5 cities, from January 2016 to December 2025. It includes dengue case counts, population density, waterlogging risk, sanitation scores, average/maximum/minimum temperatures, rainfall, and relative humidity. The data is processed and used to train Random Forest models for predicting dengue cases 2, 3, and 4 weeks ahead.
 
 ### Main Data Attributes
 - Ward ID
@@ -178,13 +178,30 @@ A detailed explanation of the system architecture, data flow, model selection, v
 
 ## 9. Attributions & References
 
-- Dataset: [Add Dataset Source]
-- Open-source libraries: [Add Library Names and Licenses]
-- External assets and resources: [Add Sources]
-- Other references: [Add References]
+- Dataset: Hackathon Preliminary Dengue Dataset (hackathon_preli_dataset.xlsx), provided for the hackathon. The original upstream data source has not been specified. Processed dataset: processed_dengue_data.csv.
+- Open-source libraries:
+  1. Python – Python Software Foundation License
+  2. Scikit-learn – BSD 3-Clause License
+  3. Pandas – BSD 3-Clause License
+  4. NumPy – BSD 3-Clause License
+  5. FastAPI – MIT License
+  6. Uvicorn – BSD 3-Clause License
+  7. Joblib – BSD 3-Clause License
+  8. Node.js – MIT License
+  9. Express.js – MIT License
+  10. Axios – MIT License
+  11. Supabase JavaScript Client – MIT License
 
+Chart.js – MIT License
+- External assets and resources: Google Fonts (Plus Jakarta Sans, Inter, and JetBrains Mono), if used in the application. No third-party images or illustrations are currently attributed.
+- Other references:
+  1. Scikit-learn documentation for machine learning model development.
+  2. FastAPI documentation for AI API development.
+  3. Supabase documentation for database integration.
+  4. Chart.js documentation for data visualization.
+  5. Official Python and Node.js documentation.
 ---
 
 ## 10. License
 
-[Add License Information]
+This project is licensed under the MIT License. You are free to use, modify, and distribute this software in accordance with the MIT License terms.
