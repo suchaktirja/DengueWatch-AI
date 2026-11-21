@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Risk Prediction — DengueWatch AI</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="app-shell">
+        <aside class="sidebar"><a class="brand" href="index.html"><span
+                    class="brand-mark">✚</span><span>DengueWatch<small>AI SURVEILLANCE</small></span></a>
+            <div class="nav-label">WORKSPACE</div>
+            <nav><a class="nav-link" href="index.html">▦ <span>Overview</span></a><a class="nav-link active"
+                    href="risk-prediction.html">⌁ <span>Risk Prediction</span></a><a class="nav-link"
+                    href="weather-analytics.html">☁ <span>Weather Analytics</span></a><a class="nav-link"
+                    href="dengue-history.html">▤ <span>Dengue History</span></a><a class="nav-link"
+                    href="ward-comparison.html">▥ <span>Ward Comparison</span></a></nav>
+            <div class="sidebar-bottom"><a class="nav-link" href="help.html">ⓘ <span>Help & documentation</span></a>
+                <div class="team-card"><b>Public health team</b><small>Surveillance workspace</small>
+                    <p>5 cities · 60 wards monitored weekly</p>
+                </div>
+            </div>
+        </aside>
+        <main class="main">
+            <header class="topbar"><a class="crumb" href="index.html">Surveillance <span>/</span> <b>Risk
+                        Prediction</b></a>
+                <div class="top-actions"><span class="model-pill">● Model v2.4</span><button class="btn btn-dark"
+                        id="exportBtn">⇩ Export report</button></div>
+            </header>
+            <div class="content">
+                <div class="page-heading">
+                    <div>
+                        <div class="eyebrow">EARLY WARNING SYSTEM</div>
+                        <h1>Risk Prediction</h1>
+                        <p>Explore ward-level dengue risk over the next 2–4 weeks.</p>
+                    </div>
+                    <div class="filters"><label>City<select id="citySelect">
+                                <option>Dhaka North</option>
+                                <option>Dhaka South</option>
+                                <option>Chattogram</option>
+                                <option>Gazipur</option>
+                                <option>Narayanganj</option>
+                            </select></label><label>Ward<select id="wardSelect">
+                                <option>Ward 17</option>
+                                <option>Ward 05</option>
+                                <option>Ward 12</option>
+                                <option>Ward 08</option>
+                                <option>Ward 04</option>
+                            </select></label><label>Prediction period<div class="segmented" id="periodSelect"><button
+                                    data-period="2">2 weeks</button><button class="selected" data-period="3">3
+                                    weeks</button><button data-period="4">4 weeks</button></div></label></div>
+                </div>
+                <section class="feature-grid">
+                    <article class="prediction-card">
+                        <div class="card-kicker">PREDICTED OUTBREAK RISK <span class="live-tag">MODEL OUTPUT</span>
+                        </div>
+                        <div class="prediction-title">
+                            <div>
+                                <h2 id="predLocation">Dhaka North / Ward 17</h2>
+                                <p id="predDates">W32–W34, 2025</p>
+                            </div><span class="confidence"><small>MODEL CONFIDENCE</small><b>91.6%</b></span>
+                        </div>
+                        <div class="risk-row">
+                            <div><small>PREDICTED RISK</small><strong id="riskLabel">High</strong><span>Elevated
+                                    transmission</span></div>
+                            <div class="score"><small>Risk score</small><b id="riskScore">78</b><span>/ 100</span></div>
+                        </div>
+                        <div class="risk-meter"><i></i><i></i><i class="on"></i><i></i></div>
+                        <div class="risk-scale">
+                            <span>Low</span><span>Medium</span><span>High</span><span>Critical</span></div>
+                        <div class="recommendation">↗ Prioritize vector control and field surveillance in the selected
+                            ward.</div>
+                    </article>
+                    <article class="card drivers">
+                        <div class="card-head">
+                            <div>
+                                <h3>What’s driving the risk?</h3>
+                                <p>Relative model contribution</p>
+                            </div>
+                        </div>
+                        <div class="driver-list">
+                            <div><span>Rainfall</span>
+                                <div class="bar"><i style="width:86%"></i></div><b>186 mm</b>
+                            </div>
+                            <div><span>Water logging</span>
+                                <div class="bar"><i style="width:78%"></i></div><b>High</b>
+                            </div>
+                            <div><span>Humidity</span>
+                                <div class="bar"><i style="width:72%"></i></div><b>84%</b>
+                            </div>
+                            <div><span>Population density</span>
+                                <div class="bar"><i style="width:66%"></i></div><b>31.2k/km²</b>
+                            </div>
+                            <div><span>Temperature</span>
+                                <div class="bar"><i style="width:54%"></i></div><b>30.8°C</b>
+                            </div>
+                            <div><span>Sanitation</span>
+                                <div class="bar"><i style="width:42%"></i></div><b>42 / 100</b>
+                            </div>
+                        </div>
+                    </article>
+                </section>
+                <section class="section-grid">
+                    <article class="card">
+                        <h3>Risk level guide</h3>
+                        <p class="muted">Illustrative score bands for this frontend prototype.</p>
+                        <div class="guide-list">
+                            <div><b class="badge low">Low</b><span>0–24</span><small>Routine monitoring</small></div>
+                            <div><b class="badge medium">Medium</b><span>25–49</span><small>Increase routine
+                                    checks</small></div>
+                            <div><b class="badge high">High</b><span>50–79</span><small>Prioritize ward
+                                    surveillance</small></div>
+                            <div><b class="badge critical">Critical</b><span>80–100</span><small>Urgent field
+                                    assessment</small></div>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <h3>Prediction notes</h3>
+                        <p class="muted">The dashboard is a decision-support prototype. Risk score, confidence and
+                            factor contributions shown here are sample UI values until connected to a validated
+                            prediction API.</p>
+                        <div class="notice">⚑ Always validate model outputs with public-health teams and current
+                            surveillance data.</div>
+                    </article>
+                </section>
+                <footer>Historical coverage 2016–2025 / 5 cities / 60 wards <span>Illustrative data · Not a clinical
+                        diagnosis</span></footer>
+            </div>
+        </main>
+    </div>
+    <div class="toast" id="toast"></div>
+    <script src="js/app.js"></script>
+</body>
+
+</html>
