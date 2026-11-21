@@ -171,7 +171,7 @@ A detailed explanation of the system architecture, data flow, model selection, v
 
 ## 8. Demo & Deployment
 
-- **Live Demo:** [Add Deployed Website URL]
+- **Live Demo:** https://denguewatchai.vercel.app
 - **Demo Video:** [Add Video Link]
 
 ---
