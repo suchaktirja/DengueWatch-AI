@@ -62,7 +62,12 @@ app.use((err, req, res, next) => {
 // Port configuration
 const PORT = process.env.PORT || 5000;
 
-// Start server
-app.listen(PORT, () => {
-    console.log('DengueWatch AI Backend is running on port ' + PORT);
-});
+// Start local dev server only outside of serverless (Vercel) runtime
+if (process.env.NODE_ENV !== 'production') {
+    app.listen(PORT, () => {
+        console.log('DengueWatch AI Backend is running on port ' + PORT);
+    });
+}
+
+// Export app for Vercel serverless runtime
+module.exports = app;
