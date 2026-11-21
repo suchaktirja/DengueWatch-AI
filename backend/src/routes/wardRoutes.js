@@ -1,12 +1,8 @@
 const express = require('express');
 const router = express.Router();
+const wardController = require('../controllers/wardController');
 
 // Get all wards
-router.get('/', (req, res) => {
-    res.json({
-        message: 'Ward API is working',
-        wards: []
-    });
-});
+router.get('/', wardController.getAllWards);
 
 module.exports = router;
