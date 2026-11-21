@@ -39,22 +39,29 @@ The platform aims to support early awareness, data-driven decision-making, and m
 - Figma (UI/UX Design)
 
 ### Backend
-- Programming Language: [Add Here]
-- Runtime Environment: [Add Here]
-- Framework: [Add Here]
-- API Integration: [Add Here]
-- Workflow Automation: [Add Here]
+- Programming Language: JavaScript
+- Runtime Environment: Node.js
+- Framework: Express.js
+- API Integration: REST API development using Express.js; Supabase JavaScript Client for backend connectivity(integration in progress). 
+- Workflow Automation: Node.js-based backend processing, automated data retrieval, rainfall lag calculations and dengue risk prediction (under development).
 
 ### Database
-- Database Platform: [Add Here]
-- Database Design & Management: [Add Here]
+- Database Platform: Supabase
+- Database Design & Management: Supabase 
 
 ### Deployment
-- Hosting Platform: [Add Here]
-- Deployment Configuration: [Add Here]
+- Hosting Platform: Vercel
+- Deployment Configuration: Node.js backend configuration, environment variables and API endpoint setup.
 
 ### Additional Libraries & Tools
-- [Add libraries and tools here]
+- 1. Google Antigravity – AI-assisted coding, repository inspection, code generation and debugging.
+2. Git & GitHub – Version control, code collaboration and project management.
+3. npm – Installing and managing backend dependencies.
+4. PowerShell – Running backend commands and testing APIs.
+5. Express.js – Building backend API endpoints.
+6. Supabase JavaScript Client – Connecting the backend to the database (integration pending).
+7. dotenv – Managing environment variables.
+8. CORS – Enabling frontend-backend communication.
 
 ---
 
