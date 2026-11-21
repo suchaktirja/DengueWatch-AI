@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Help — DengueWatch AI</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="app-shell">
+        <aside class="sidebar"><a class="brand" href="index.html"><span
+                    class="brand-mark">✚</span><span>DengueWatch<small>AI SURVEILLANCE</small></span></a>
+            <div class="nav-label">WORKSPACE</div>
+            <nav><a class="nav-link" href="index.html">▦ <span>Overview</span></a><a class="nav-link"
+                    href="risk-prediction.html">⌁ <span>Risk Prediction</span></a><a class="nav-link"
+                    href="weather-analytics.html">☁ <span>Weather Analytics</span></a><a class="nav-link"
+                    href="dengue-history.html">▤ <span>Dengue History</span></a><a class="nav-link"
+                    href="ward-comparison.html">▥ <span>Ward Comparison</span></a></nav>
+            <div class="sidebar-bottom"><a class="nav-link active" href="help.html">ⓘ <span>Help &
+                        documentation</span></a>
+                <div class="team-card"><b>Public health team</b><small>Surveillance workspace</small>
+                    <p>5 cities · 60 wards monitored weekly</p>
+                </div>
+            </div>
+        </aside>
+        <main class="main">
+            <header class="topbar"><a class="crumb" href="index.html">Surveillance <span>/</span> <b>Help &
+                        documentation</b></a></header>
+            <div class="content">
+                <div class="page-heading">
+                    <div>
+                        <div class="eyebrow">GETTING STARTED</div>
+                        <h1>Help & documentation</h1>
+                        <p>How to use the DengueWatch AI prototype.</p>
+                    </div>
+                </div>
+                <section class="card help-content">
+                    <h3>Using the dashboard</h3>
+                    <p>Select a city and ward to explore the example ward-level indicators. Choose a 2, 3 or 4 week
+                        period to update the prediction display.</p>
+                    <h3>Understanding risk levels</h3>
+                    <p>Low, Medium, High and Critical are displayed as risk tiers. The score bands on the Risk
+                        Prediction page are illustrative placeholders and must be replaced with thresholds validated by
+                        your project team.</p>
+                    <h3>About the data shown</h3>
+                    <p>This frontend currently uses illustrative sample values based on the supplied dashboard design.
+                        It is not connected to Supabase or a prediction model. Replace the sample objects in
+                        <code>js/app.js</code> with API responses when the backend is ready.</p>
+                    <div class="notice">Important: This tool is a public-health decision-support prototype, not a
+                        clinical diagnosis or a substitute for official surveillance guidance.</div><a
+                        class="btn btn-primary inline-btn" href="index.html">Back to overview →</a>
+                </section>
+                <footer>Historical coverage 2016–2025 / 5 cities / 60 wards <span>Illustrative data · Not a clinical
+                        diagnosis</span></footer>
+            </div>
+        </main>
+    </div>
+    <script src="js/app.js"></script>
+</body>
+
+</html>
