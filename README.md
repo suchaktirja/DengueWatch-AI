@@ -124,7 +124,17 @@ The following AI tools were used during the development process:
 - [Add API name and its purpose]
 
 ### AI Model / Endpoint
-- [Add model name, endpoint, and purpose if integrated into the application.]
+- Model Name: Random Forest Regressor (Scikit-learn)
+- AI Service: Python FastAPI
+- Endpoint: POST /predict
+- Local API URL: http://127.0.0.1:8000/predict
+- Purpose: Predicts dengue cases for each ward 2, 3, and 4 weeks ahead using historical dengue cases, weather conditions, and ward vulnerability indicators.
+- Prediction Outputs:
+  1. Predicted dengue cases for 2 weeks ahead.
+  2. Predicted dengue cases for 3 weeks ahead.
+  3. Predicted dengue cases for 4 weeks ahead.
+  4. Risk classification: Low, Medium, or High.
+- Backend Integration: Node.js and Express connect to the FastAPI AI service through an Axios POST request at /api/predict.
 
 ---
 
