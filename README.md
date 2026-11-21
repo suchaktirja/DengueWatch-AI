@@ -73,7 +73,7 @@ Make sure the following software and tools are installed:
 - Visual Studio Code: For development
 - Live Server Extension: For running the frontend locally
 - Git: For repository management
-- 
+
 ### Clone the Repository
 
 ```bash
@@ -90,9 +90,9 @@ npm install
 ### Environment Variables
 
 ```env
-PORT=5000
-SUPABASE_URL=your_supabase_project_url
-SUPABASE_ANON_KEY=your_supabase_anon_key
+PORT= 5000
+SUPABASE_URL= your_supabase_project_url
+SUPABASE_ANON_KEY= your_supabase_anon_key
 ```
 
 ### Run the Project
@@ -125,8 +125,6 @@ The following AI tools were used during the development process:
 
 ### AI Model / Endpoint
 - [Add model name, endpoint, and purpose if integrated into the application.]
-
-**Note:** Figma and ChatGPT were used as development tools. Their use does not mean that an AI model is integrated into the deployed application.
 
 ---
 
