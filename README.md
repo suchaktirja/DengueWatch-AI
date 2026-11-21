@@ -67,7 +67,7 @@ The platform aims to support early awareness, data-driven decision-making, and m
 ### Clone the Repository
 
 ```bash
-git clone [Repository URL]
+git clone [[Repository URL]](https://github.com/suchaktirja/DengueWatch-AI.git)
 cd DengueWatch-AI
 ```
 
