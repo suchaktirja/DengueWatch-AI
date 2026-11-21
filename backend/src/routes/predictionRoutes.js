@@ -1,12 +1,11 @@
 const express = require('express');
-<<<<<<< HEAD
 const router = express.Router();
 const supabase = require('../config/supabase');
 
-// GET /api/risk-predictions - latest precomputed risk predictions
 router.get('/', async (req, res, next) => {
     try {
         const { ward_id } = req.query;
+
         let query = supabase
             .from('risk_predictions')
             .select('*, wards(ward_name, city, district_name)')
@@ -19,8 +18,8 @@ router.get('/', async (req, res, next) => {
         const { data, error } = await query;
         if (error) throw error;
 
-        // Group by ward_id to return the latest prediction per ward
         const latestByWard = {};
+
         for (const item of data) {
             if (!latestByWard[item.ward_id]) {
                 latestByWard[item.ward_id] = item;
@@ -37,13 +36,5 @@ router.get('/', async (req, res, next) => {
         next(err);
     }
 });
-=======
-console.log('PREDICTION ROUTES LOADED');
-const router = express.Router();
-
-const predictionController = require('../controllers/predictionController');
-
-router.post('/predict', predictionController.getPrediction);
->>>>>>> f972cf1 (Add AI prediction model and backend integration)
 
 module.exports = router;
