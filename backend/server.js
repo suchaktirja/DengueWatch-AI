@@ -11,10 +11,16 @@ app.use(express.json());
 // Import routes
 const healthRoutes = require('./src/routes/healthRoutes');
 const wardRoutes = require('./src/routes/wardRoutes');
+const dengueRoutes = require('./src/routes/dengueRoutes');
+const predictionRoutes = require('./src/routes/predictionRoutes');
+const weatherRoutes = require('./src/routes/weatherRoutes');
 
 // Register routes
 app.use('/api', healthRoutes);
 app.use('/api/wards', wardRoutes);
+app.use('/api/dengue-cases', dengueRoutes);
+app.use('/api/risk-predictions', predictionRoutes);
+app.use('/api/weather', weatherRoutes);
 
 // Home route
 app.get('/', (req, res) => {
