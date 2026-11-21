@@ -1,4 +1,5 @@
 const express = require('express');
+<<<<<<< HEAD
 const router = express.Router();
 const supabase = require('../config/supabase');
 
@@ -36,5 +37,13 @@ router.get('/', async (req, res, next) => {
         next(err);
     }
 });
+=======
+console.log('PREDICTION ROUTES LOADED');
+const router = express.Router();
+
+const predictionController = require('../controllers/predictionController');
+
+router.post('/predict', predictionController.getPrediction);
+>>>>>>> f972cf1 (Add AI prediction model and backend integration)
 
 module.exports = router;
