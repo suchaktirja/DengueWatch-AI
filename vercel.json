@@ -2,10 +2,15 @@
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "version": 2,
   "builds": [
-    {
-      "src": "backend/server.js",
-      "use": "@vercel/node"
-    }
+    { "src": "backend/server.js",      "use": "@vercel/node"   },
+    { "src": "index.html",             "use": "@vercel/static" },
+    { "src": "style.css",              "use": "@vercel/static" },
+    { "src": "script.js",              "use": "@vercel/static" },
+    { "src": "dengue-history.html",    "use": "@vercel/static" },
+    { "src": "help.html",              "use": "@vercel/static" },
+    { "src": "risk-prediction.html",   "use": "@vercel/static" },
+    { "src": "ward-comparison.html",   "use": "@vercel/static" },
+    { "src": "weather-analytics.html", "use": "@vercel/static" }
   ],
   "routes": [
     {
