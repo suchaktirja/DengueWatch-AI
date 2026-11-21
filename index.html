@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>DengueWatch AI — Overview</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+    <div class="app-shell">
+        <aside class="sidebar" id="sidebar"><a class="brand" href="index.html"><span
+                    class="brand-mark">✚</span><span>DengueWatch<small>AI SURVEILLANCE</small></span></a>
+            <div class="nav-label">WORKSPACE</div>
+            <nav><a class="nav-link active" href="index.html">▦ <span>Overview</span></a><a class="nav-link"
+                    href="risk-prediction.html">⌁ <span>Risk Prediction</span></a><a class="nav-link"
+                    href="weather-analytics.html">☁ <span>Weather Analytics</span></a><a class="nav-link"
+                    href="dengue-history.html">▤ <span>Dengue History</span></a><a class="nav-link"
+                    href="ward-comparison.html">▥ <span>Ward Comparison</span></a></nav>
+            <div class="sidebar-bottom"><a class="nav-link" href="help.html">ⓘ <span>Help & documentation</span></a>
+                <div class="team-card">
+                    <div class="team-icon">✚</div><b>Public health team</b><small>Surveillance workspace</small>
+                    <p>5 cities · 60 wards monitored weekly</p>
+                </div>
+            </div>
+        </aside>
+        <main class="main">
+            <header class="topbar"><button class="mobile-menu" id="menuBtn">☰</button>
+                <div class="crumb">Surveillance <span>/</span> <b>Overview</b></div>
+                <div class="top-actions"><span class="replay">Historical replay · W31 2025</span><span
+                        class="model-pill">● Model v2.4</span><button class="btn btn-dark" id="exportBtn">⇩ Export
+                        report</button></div>
+            </header>
+            <div class="content">
+                <div class="page-heading">
+                    <div>
+                        <div class="eyebrow">PUBLIC HEALTH INTELLIGENCE</div>
+                        <h1>Overview</h1>
+                        <p>Turning early signals into timely action.</p>
+                    </div>
+                    <div class="filters"><label>City<select id="citySelect">
+                                <option>All cities</option>
+                                <option>Dhaka North</option>
+                                <option>Dhaka South</option>
+                                <option>Chattogram</option>
+                                <option>Gazipur</option>
+                                <option>Narayanganj</option>
+                            </select></label><label>Ward<select id="wardSelect">
+                                <option>All wards</option>
+                                <option>Ward 17</option>
+                                <option>Ward 05</option>
+                                <option>Ward 12</option>
+                                <option>Ward 08</option>
+                                <option>Ward 04</option>
+                            </select></label><label>Prediction period<div class="segmented" id="periodSelect"><button
+                                    data-period="2">2 weeks</button><button class="selected" data-period="3">3
+                                    weeks</button><button data-period="4">4 weeks</button></div></label></div>
+                </div>
+                <section class="stats-grid">
+                    <article class="stat-card">
+                        <div class="stat-top">Total Monitored Wards <span class="stat-icon mint">▦</span></div>
+                        <div class="stat-value">60</div>
+                        <div class="stat-foot">Across 5 cities <span>100% coverage</span></div>
+                    </article>
+                    <article class="stat-card">
+                        <div class="stat-top">Total Dengue Cases <span class="stat-icon amber">✚</span></div>
+                        <div class="stat-value">1,284</div>
+                        <div class="stat-foot">Reporting week · W31 <span class="up">↑ 12.8% vs W30</span></div>
+                    </article>
+                    <article class="stat-card">
+                        <div class="stat-top">High-Risk Wards <span class="stat-icon coral">⌁</span></div>
+                        <div class="stat-value">14</div>
+                        <div class="stat-foot">10 High · 4 Critical <span class="danger">Action required</span></div>
+                    </article>
+                    <article class="stat-card">
+                        <div class="stat-top">Average Rainfall <span class="stat-icon mint">☂</span></div>
+                        <div class="stat-value">142.6</div>
+                        <div class="stat-foot">mm / week · all cities <span class="up">↑ 18.2 mm</span></div>
+                    </article>
+                </section>
+                <section class="feature-grid">
+                    <article class="prediction-card">
+                        <div class="card-kicker">DENGUE RISK PREDICTION <span class="live-tag">3-WEEK OUTLOOK</span>
+                        </div>
+                        <div class="prediction-title">
+                            <div>
+                                <h2 id="predLocation">Dhaka North / Ward 17</h2>
+                                <p id="predDates">W32–W34, 2025</p>
+                            </div><span class="confidence"><small>MODEL CONFIDENCE</small><b>91.6%</b></span>
+                        </div>
+                        <div class="risk-row">
+                            <div><small>PREDICTED RISK</small><strong id="riskLabel">High</strong><span>Elevated
+                                    transmission</span></div>
+                            <div class="score"><small>Risk score</small><b id="riskScore">78</b><span>/ 100</span></div>
+                        </div>
+                        <div class="risk-meter"><i></i><i></i><i class="on"></i><i></i></div>
+                        <div class="risk-scale">
+                            <span>Low</span><span>Medium</span><span>High</span><span>Critical</span></div>
+                        <div class="recommendation">↗ Prioritize vector control and field surveillance in Ward 17.</div>
+                        <a class="card-link" href="risk-prediction.html">View forecast →</a>
+                    </article>
+                    <article class="card drivers">
+                        <div class="card-head">
+                            <div>
+                                <h3>What’s driving the risk?</h3>
+                                <p>Ward 17 · relative model contribution</p>
+                            </div><span class="dots">•••</span>
+                        </div>
+                        <div class="driver-list">
+                            <div><span>Rainfall</span>
+                                <div class="bar"><i style="width:86%"></i></div><b>186 mm</b>
+                            </div>
+                            <div><span>Water logging</span>
+                                <div class="bar"><i style="width:78%"></i></div><b>High</b>
+                            </div>
+                            <div><span>Humidity</span>
+                                <div class="bar"><i style="width:72%"></i></div><b>84%</b>
+                            </div>
+                            <div><span>Population density</span>
+                                <div class="bar"><i style="width:66%"></i></div><b>31.2k/km²</b>
+                            </div>
+                            <div><span>Temperature</span>
+                                <div class="bar"><i style="width:54%"></i></div><b>30.8°C</b>
+                            </div>
+                            <div><span>Sanitation</span>
+                                <div class="bar"><i style="width:42%"></i></div><b>42 / 100</b>
+                            </div>
+                        </div>
+                    </article>
+                </section>
+                <section class="section-grid">
+                    <article class="card">
+                        <div class="card-head">
+                            <div>
+                                <h3>Weather analytics</h3>
+                                <p>Dhaka North · weekly signals</p>
+                            </div><a href="weather-analytics.html">Last 8 weeks ↗</a>
+                        </div>
+                        <div class="weather-summary">
+                            <div><small>Weekly rainfall</small><b>186 <em>mm</em> <span class="up">+24%</span></b></div>
+                            <div><small>Temperature</small><b>30.8°</b><small>°C</small></div>
+                            <div><small>Humidity</small><b>84%</b></div>
+                        </div><canvas id="rainChart" height="115"></canvas>
+                        <div class="chart-caption">Rising rainfall over the last 3 weeks</div>
+                    </article>
+                    <article class="card">
+                        <div class="card-head">
+                            <div>
+                                <h3>Rainfall lag impact</h3>
+                                <p>Association with dengue cases</p>
+                            </div>
+                        </div>
+                        <div class="lag-list">
+                            <div><span>1 week</span>
+                                <div class="lagbar"><i style="width:42%"></i></div><b>0.42</b>
+                            </div>
+                            <div><span>2 weeks</span>
+                                <div class="lagbar"><i style="width:61%"></i></div><b>0.61</b>
+                            </div>
+                            <div class="lag-list-best"><span>3 weeks</span>
+                                <div class="lagbar"><i style="width:86%"></i></div><b>0.86</b>
+                            </div>
+                            <div><span>4 weeks</span>
+                                <div class="lagbar"><i style="width:73%"></i></div><b>0.73</b>
+                            </div>
+                        </div>
+                        <div class="chart-caption">Strongest signal at 3 weeks</div>
+                    </article>
+                </section>
+                <section class="section-grid history-grid">
+                    <article class="card">
+                        <div class="card-head">
+                            <div>
+                                <h3>Dengue case trends</h3>
+                                <p>All 5 cities · weekly reported cases</p>
+                            </div><a href="dengue-history.html">View history ↗</a>
+                        </div><canvas id="caseChart" height="120"></canvas>
+                        <div class="chart-legend"><span><i class="legend-reported"></i> Reported</span><span><i
+                                    class="legend-predicted"></i> Predicted</span></div>
+                    </article>
+                    <article class="card city-card">
+                        <div class="card-head">
+                            <div>
+                                <h3>Cases by city</h3>
+                                <p>Current reporting week · 1,284 total</p>
+                            </div><span class="week-tag">W31 · 2025</span>
+                        </div>
+                        <div class="city-bars">
+                            <div><span>Dhaka North</span><i style="width:100%"></i><b>468</b></div>
+                            <div><span>Dhaka South</span><i style="width:80%"></i><b>376</b></div>
+                            <div><span>Chattogram</span><i style="width:44%"></i><b>205</b></div>
+                            <div><span>Gazipur</span><i style="width:30%"></i><b>139</b></div>
+                            <div><span>Narayanganj</span><i style="width:21%"></i><b>96</b></div>
+                        </div>
+                    </article>
+                </section>
+                <section class="card ward-card">
+                    <div class="card-head">
+                        <div>
+                            <h3>Ward comparison</h3>
+                            <p>Prioritize intervention with a ward-level view.</p>
+                        </div>
+                        <div class="table-filters"><select id="tableCity">
+                                <option>All cities</option>
+                                <option>Dhaka North</option>
+                                <option>Dhaka South</option>
+                                <option>Chattogram</option>
+                                <option>Gazipur</option>
+                                <option>Narayanganj</option>
+                            </select><select id="tableRisk">
+                                <option>Risk: all levels</option>
+                                <option>Low</option>
+                                <option>Medium</option>
+                                <option>High</option>
+                                <option>Critical</option>
+                            </select></div>
+                    </div>
+                    <div class="table-wrap">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Ward ID</th>
+                                    <th>City</th>
+                                    <th>Population density</th>
+                                    <th>Water logging risk</th>
+                                    <th>Sanitation score</th>
+                                    <th>Dengue cases</th>
+                                    <th>Predicted risk</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody id="wardTable"></tbody>
+                        </table>
+                    </div>
+                    <div class="table-bottom"><span id="tableCount">Showing 5 of 60 wards</span><a
+                            href="ward-comparison.html">View all wards →</a></div>
+                </section>
+                <footer>Historical coverage 2016–2025 / 5 cities / 60 wards <span>Illustrative data · Decision support,
+                        not a clinical diagnosis</span></footer>
+            </div>
+        </main>
+    </div>
+    <div class="toast" id="toast"></div>
+    <script src="js/app.js"></script>
+</body>
+
+</html>
