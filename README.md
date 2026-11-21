@@ -91,8 +91,8 @@ npm install
 
 ```env
 PORT= 5000
-SUPABASE_URL= your_supabase_project_url
-SUPABASE_ANON_KEY= your_supabase_anon_key
+SUPABASE_URL= https://qoxdqpexgbcsnainxahc.supabase.co
+SUPABASE_ANON_KEY= sb_publishable_nF-GCBfGkwODvS-3Yddy-Q_XZ5OpYPK
 ```
 
 ### Run the Project
