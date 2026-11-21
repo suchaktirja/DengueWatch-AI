@@ -113,8 +113,9 @@ The following AI tools were used during the development process:
 
 | Tool | Purpose |
 |---|---|
-| Figma | UI/UX design and frontend interface planning. |
-| ChatGPT (OpenAI) | Code assistance and frontend development support. |
+| Figma | UI/UX design and interface planning. |
+| ChatGPT (OpenAI) | Code assistance and development support. |
+| Google Antigravity | AI-assisted development, code generation, debugging, and project workflow support. |
 
 ### External APIs
 - [Add API name and its purpose]
