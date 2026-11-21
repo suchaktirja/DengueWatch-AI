@@ -54,15 +54,14 @@ The platform aims to support early awareness, data-driven decision-making, and m
 - Deployment Configuration: Node.js backend configuration, environment variables and API endpoint setup.
 
 ### Additional Libraries & Tools
-- 1. Google Antigravity – AI-assisted coding, repository inspection, code generation and debugging.
-2. Git & GitHub – Version control, code collaboration and project management.
-3. npm – Installing and managing backend dependencies.
-4. PowerShell – Running backend commands and testing APIs.
-5. Express.js – Building backend API endpoints.
-6. Supabase JavaScript Client – Connecting the backend to the database (integration pending).
-7. dotenv – Managing environment variables.
-8. CORS – Enabling frontend-backend communication.
-
+- Google Antigravity – AI-assisted coding, repository inspection, code generation and debugging.
+- Git & GitHub – Version control, code collaboration and project management.
+- npm – Installing and managing backend dependencies.
+- PowerShell – Running backend commands and testing APIs.
+- Express.js – Building backend API endpoints.
+- Supabase JavaScript Client – Connecting the backend to the database (integration pending).
+- dotenv – Managing environment variables.
+- CORS – Enabling frontend-backend communication.
 ---
 
 ## 4. Installation & Setup Instructions
